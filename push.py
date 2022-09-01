@@ -3,7 +3,7 @@ import subprocess, time
 Leetcode = os.listdir(path="./Leetcode")
 
 for files in Leetcode:
-    if(".cpp" not in files):
+    if ".cpp" not in files or "tempCodeRunner" in files:
         os.remove('./Leetcode/' + files)
 
 subprocess.call("git add .", shell=True)
